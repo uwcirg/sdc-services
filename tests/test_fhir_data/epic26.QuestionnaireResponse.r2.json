@@ -1,0 +1,609 @@
+{
+  "identifier": {
+    "label": "cPRO survey session ID",
+    "system": "https://ae-eproms-test.cirg.washington.edu",
+    "use": "official",
+    "value": "2084.0"
+  },
+  "questionnaire": {
+    "display": "EPIC 26 Short Form",
+    "reference": "https://eproms-test.cirg.washington.edu/api/questionnaires/epic26"
+  },
+  "resourceType": "QuestionnaireResponse",
+  "source": {
+    "display": "patient demographics",
+    "reference": "https://eproms-test.cirg.washington.edu/api/demographics/3015"
+  },
+  "status": "completed",
+  "subject": {
+    "display": "patient demographics",
+    "reference": "https://eproms-test.cirg.washington.edu/api/demographics/3015"
+  },
+  "author": {
+    "display": "patient demographics",
+    "reference": "https://eproms-test.cirg.washington.edu/api/demographics/3015"
+  },
+  "authored": "2020-09-19T00:05:38Z",
+  "extension": [
+    {
+      "url": "http://us.truenth.org/identity-codes/visit-name",
+      "visit_name": "Baseline"
+    }
+  ],
+  "group": {
+    "question": [
+      {
+        "answer": [
+          {
+            "valueString": "About once a week"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.1.4",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 4
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "About once a week"
+            }
+          }
+        ],
+        "linkId": "epic26.1",
+        "text": "Over the past 4 weeks, how often have you leaked urine?"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "Occasional dribbling"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.2.3",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 3
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Occasional dribbling"
+            }
+          }
+        ],
+        "linkId": "epic26.2",
+        "text": "Which of the following best describes your urinary control during the last 4 weeks?"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "2 pads <u>per day</u>"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.3.3",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 2
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "2 pads <u>per day</u>"
+            }
+          }
+        ],
+        "linkId": "epic26.3",
+        "text": "How many pads or adult diapers per day did you usually use to control leakage during the last 4 weeks?"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "No problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.4.1",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 0
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "No problem"
+            }
+          }
+        ],
+        "linkId": "epic26.4",
+        "text": "Dripping or leaking urine"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "No problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.5.1",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 0
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "No problem"
+            }
+          }
+        ],
+        "linkId": "epic26.5",
+        "text": "Pain or burning on urination"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "No problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.6.1",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 0
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "No problem"
+            }
+          }
+        ],
+        "linkId": "epic26.6",
+        "text": "Bleeding with urination"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "No problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.7.1",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 0
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "No problem"
+            }
+          }
+        ],
+        "linkId": "epic26.7",
+        "text": "Weak urine stream or incomplete emptying"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "Very small problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.8.2",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 1
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Very small problem"
+            }
+          }
+        ],
+        "linkId": "epic26.8",
+        "text": "Need to urinate frequently during the day"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "Moderate Problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.9.4",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 4
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Moderate Problem"
+            }
+          }
+        ],
+        "linkId": "epic26.9",
+        "text": "Overall, how big a problem has your urinary function been for you during the last 4 weeks?"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "No problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.10.1",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 0
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "No problem"
+            }
+          }
+        ],
+        "linkId": "epic26.10",
+        "text": "Urgency to have a bowel movement"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "No problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.11.1",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 0
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "No problem"
+            }
+          }
+        ],
+        "linkId": "epic26.11",
+        "text": "Increased frequency of bowel movements"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "No problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.12.1",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 0
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "No problem"
+            }
+          }
+        ],
+        "linkId": "epic26.12",
+        "text": "Losing control of your stools"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "Very small problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.13.2",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 1
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Very small problem"
+            }
+          }
+        ],
+        "linkId": "epic26.13",
+        "text": "Bloody stools"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "Small Problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.14.3",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 2
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Small Problem"
+            }
+          }
+        ],
+        "linkId": "epic26.14",
+        "text": "Abdominal / Pelvic / Rectal Pain"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "Moderate Problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.15.4",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 4
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Moderate Problem"
+            }
+          }
+        ],
+        "linkId": "epic26.15",
+        "text": "Overall, how big a problem have your bowel habits been for you during the past 4 weeks?"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "Very Poor to None"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.16.1",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 1
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Very Poor to None"
+            }
+          }
+        ],
+        "linkId": "epic26.16",
+        "text": "Your ability to have an erection?"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "Fair"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.17.3",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 3
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Fair"
+            }
+          }
+        ],
+        "linkId": "epic26.17",
+        "text": "Your ability to reach orgasm (climax)?"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "Firm enough for masturbation and foreplay only"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.18.3",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 3
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Firm enough for masturbation and foreplay only"
+            }
+          }
+        ],
+        "linkId": "epic26.18",
+        "text": "How would you describe the usual QUALITY of your erections during the last 4 weeks?"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "I had an erection ABOUT HALF the time I wanted one"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.19.3",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 3
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "I had an erection ABOUT HALF the time I wanted one"
+            }
+          }
+        ],
+        "linkId": "epic26.19",
+        "text": "How would you describe the FREQUENCY of your erections during the last 4 weeks?"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "Good"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.20.4",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 4
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Good"
+            }
+          }
+        ],
+        "linkId": "epic26.20",
+        "text": "Overall, how would you rate your ability to function sexually during the last 4 weeks?"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "Moderate problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.21.4",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 4
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Moderate problem"
+            }
+          }
+        ],
+        "linkId": "epic26.21",
+        "text": "Overall, how big a problem has your sexual function or lack of sexual function been for you during the last 4 weeks?"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "No problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.22.1",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 0
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "No problem"
+            }
+          }
+        ],
+        "linkId": "epic26.22",
+        "text": "Hot flashes"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "No problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.23.1",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 0
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "No problem"
+            }
+          }
+        ],
+        "linkId": "epic26.23",
+        "text": "Breast tenderness / enlargement"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "No problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.24.1",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 0
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "No problem"
+            }
+          }
+        ],
+        "linkId": "epic26.24",
+        "text": "Feeling depressed"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "No problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.25.1",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 0
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "No problem"
+            }
+          }
+        ],
+        "linkId": "epic26.25",
+        "text": "Lack of energy"
+      },
+      {
+        "answer": [
+          {
+            "valueString": "Very small problem"
+          },
+          {
+            "valueCoding": {
+              "code": "epic26.26.2",
+              "extension": [
+                {
+                  "url": "https://hl7.org/fhir/StructureDefinition/iso21090-CO-value",
+                  "valueDecimal": 1
+                }
+              ],
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Very small problem"
+            }
+          }
+        ],
+        "linkId": "epic26.26",
+        "text": "Change in body weight"
+      }
+    ]
+  }
+}
