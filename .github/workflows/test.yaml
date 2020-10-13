@@ -1,7 +1,7 @@
 # docker continuous integration
 # run tests
 ---
-name: Test & Build/Deliver
+name: Test
 on: [push]
 jobs:
   test:
