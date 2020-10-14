@@ -17,8 +17,6 @@ def r2_extract():
     http://build.fhir.org/ig/HL7/sdc/OperationDefinition-QuestionnaireResponse-extract.html
     """
     qnr = QuestionnaireResponse.from_json(request.json)
-
     observations = qnr.extract()
-
 
     return as_bundle(observations)

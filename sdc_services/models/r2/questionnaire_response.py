@@ -19,7 +19,6 @@ class QuestionnaireResponse(object):
 
         return qnr
 
-
     def as_fhir(self):
         fhir_json = {
             'resourceType': self.__class__.__name__,
@@ -27,9 +26,8 @@ class QuestionnaireResponse(object):
             'identifier': self.identifier,
         }
         # filter out unset attributes
-        filtered_fhir_json = {k:v for k, v in fhir_json.items() if v}
+        filtered_fhir_json = {k: v for k, v in fhir_json.items() if v}
         return filtered_fhir_json
-
 
     def walk_answers(self, items=None):
         """Traverse nested groups and answers, yielding individual answers"""
@@ -44,7 +42,6 @@ class QuestionnaireResponse(object):
                 for question in items['question']:
                     for answer in question['answer']:
                         yield answer
-
 
     def extract(self):
         """Extract coded Observations from individual answers"""
