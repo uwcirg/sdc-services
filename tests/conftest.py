@@ -24,3 +24,8 @@ def json_from_file(request, filename):
 @fixture
 def r2_questionnaire_response(request):
     return json_from_file(request, "epic26.QuestionnaireResponse.r2.json")
+
+
+@fixture
+def epro_r2_questionnaire_response(request):
+    return json_from_file(request, "empro.min.QuestionnaireResponse.r2.json")
