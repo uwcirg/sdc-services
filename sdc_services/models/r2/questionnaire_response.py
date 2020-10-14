@@ -6,7 +6,7 @@ class QuestionnaireResponse(object):
         self.group = None
         self.identifier = None
         self.authored = None
-
+        self.questionnaire = None
 
     @classmethod
     def from_json(cls, qnr_json):
@@ -15,6 +15,7 @@ class QuestionnaireResponse(object):
         qnr.group = qnr_json['group']
         qnr.identifier = qnr_json['identifier']
         qnr.authored = qnr_json['authored']
+        qnr.questionnaire = qnr_json['questionnaire']
 
         return qnr
 
@@ -53,11 +54,18 @@ class QuestionnaireResponse(object):
             if 'valueCoding' not in answer:
                 continue
 
+            questionnaire_code = {
+                'system': 'http://us.truenth.org/questionnaire',
+                'code': self.questionnaire['reference'].split('/')[-1],
+                'display': self.questionnaire['display'],
+            }
+
             obs = Observation(
-                # TODO use portal business identifer?
                 derived_from=f"QuestionnaireResponse/{self.identifier['value']}",
                 value={'valueCoding': answer['valueCoding']},
                 issued=self.authored,
+                # TODO add codes from Questionnaire questions (Questionnaire.item.code)
+                code=questionnaire_code,
             )
             observations.append(obs.as_fhir())
 

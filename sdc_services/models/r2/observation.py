@@ -5,11 +5,13 @@ See http://build.fhir.org/ig/HL7/sdc/extraction.html#observation-based-extractio
 """
 
 class Observation(object):
-    def __init__(self, derived_from=None, value=None, issued=None):
+    def __init__(self, derived_from=None, value=None, issued=None, code=None):
         # FHIR reference to other resource
         self.derived_from = derived_from
         self.value = value
         self.issued = issued
+        # list of codes
+        self.code = code
 
 
     def as_fhir(self):
@@ -26,6 +28,11 @@ class Observation(object):
                     'type': 'derived-from',
                     'target': self.derived_from,
                 }]
+            })
+
+        if self.value:
+            fhir_json.update({
+                'code': {'coding': [self.code]},
             })
 
         if self.value:
