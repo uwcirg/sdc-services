@@ -10,7 +10,7 @@ blueprint = Blueprint('fhir', __name__)
 
 # http://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire-extr-obsn.html#tabs-diff
 @blueprint.route(f'/{R2_PREFIX}/$extract', methods=('GET', 'POST'))
-def extract():
+def r2_extract():
     """
     Modeled after SDC $extract operation
 
