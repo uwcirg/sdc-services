@@ -1,0 +1,18 @@
+# docker continuous integration
+# run tests
+---
+name: Test
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: python:3.7
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Install test runner
+        run: python3 -m pip install tox
+
+      - name: Run tests
+        run: tox

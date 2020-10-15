@@ -1,0 +1,50 @@
+{
+  "identifier": {
+    "label": "cPRO survey session ID",
+    "system": "https://ae-eproms-test.cirg.washington.edu",
+    "use": "official",
+    "value": "2085.0"
+  },
+  "questionnaire": {
+    "display": "empro questionnaire",
+    "reference": "https://eproms-test.cirg.washington.edu/api/questionnaires/ironman_ss"
+  },
+  "resourceType": "QuestionnaireResponse",
+  "authored": "2020-09-19T00:05:38Z",
+  "group": {
+    "question": [
+      {
+        "text": "In the last 7 days, how OFTEN did you have pain?",
+        "linkId": "ironman_ss.1",
+        "answer": [
+          {
+            "valueString": "Almost constantly"
+          },
+          {
+            "valueCoding": {
+              "code": "ironman_ss.1.5",
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Almost constantly"
+            }
+          }
+        ]
+      },
+      {
+        "text": "In the last 7 days, what was the SEVERITY of your PAIN at its WORST?",
+        "linkId": "ironman_ss.2",
+        "answer": [
+          {
+            "valueString": "Mild"
+          },
+          {
+            "valueCoding": {
+              "code": "ironman_ss.2.2",
+              "system": "https://eproms-test.cirg.washington.edu/api/codings/assessment",
+              "text": "Mild"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
