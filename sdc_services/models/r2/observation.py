@@ -30,7 +30,7 @@ class Observation(object):
                 }]
             })
 
-        if self.value:
+        if self.code:
             fhir_json.update({
                 'code': {'coding': [self.code]},
             })
