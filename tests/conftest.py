@@ -29,5 +29,5 @@ def r2_questionnaire_response(request):
 
 
 @fixture
-def epro_r2_questionnaire_response(request):
+def empro_r2_questionnaire_response(request):
     return json_from_file(request, "empro.min.QuestionnaireResponse.r2.json")

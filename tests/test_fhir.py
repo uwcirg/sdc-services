@@ -6,7 +6,7 @@ def test_r2_bundle(r2_questionnaire_response):
     assert len(qnr.group['question']) == 26
 
 
-def test_extract_observation(epro_r2_questionnaire_response):
+def test_extract_observation(empro_r2_questionnaire_response):
     qnr = QuestionnaireResponse.from_json(epro_r2_questionnaire_response)
     observations = qnr.extract()
     assert len(observations) == 2
