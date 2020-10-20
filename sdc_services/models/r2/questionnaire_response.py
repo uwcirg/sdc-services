@@ -6,7 +6,7 @@ class QuestionnaireResponse(object):
         self.group = None
         self.identifier = None
         self.authored = None
-        self.questionnaire = None
+        self.questionnaire_ref = None
 
     @classmethod
     def from_json(cls, qnr_json):
@@ -15,7 +15,7 @@ class QuestionnaireResponse(object):
         qnr.group = qnr_json['group']
         qnr.identifier = qnr_json['identifier']
         qnr.authored = qnr_json['authored']
-        qnr.questionnaire = qnr_json['questionnaire']
+        qnr.questionnaire_ref = qnr_json['questionnaire']
 
         return qnr
 
@@ -53,8 +53,8 @@ class QuestionnaireResponse(object):
 
             questionnaire_code = {
                 'system': 'http://us.truenth.org/questionnaire',
-                'code': self.questionnaire['reference'].split('/')[-1],
-                'display': self.questionnaire['display'],
+                'code': self.questionnaire_ref['reference'].split('/')[-1],
+                'display': self.questionnaire_ref['display'],
             }
 
             obs = Observation(
