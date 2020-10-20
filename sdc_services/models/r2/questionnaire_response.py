@@ -1,4 +1,5 @@
 from sdc_services.models.r2.observation import Observation
+from sdc_services.models.r3.questionnaire import Questionnaire
 
 
 class QuestionnaireResponse(object):
@@ -7,6 +8,7 @@ class QuestionnaireResponse(object):
         self.identifier = None
         self.authored = None
         self.questionnaire_ref = None
+        self.questionnaire_res = None
 
     @classmethod
     def from_json(cls, qnr_json):
@@ -16,6 +18,14 @@ class QuestionnaireResponse(object):
         qnr.identifier = qnr_json['identifier']
         qnr.authored = qnr_json['authored']
         qnr.questionnaire_ref = qnr_json['questionnaire']
+
+        if 'contained' in qnr_json:
+            contained_questionnaires = []
+            for resource in qnr_json['contained']:
+                if resource['resourceType'] == 'Questionnaire':
+                    contained_questionnaires.append(resource)
+            # HACK use FHIR r3 for contained Questionnaire (in r2 QuestionnaireResponse)
+            qnr.questionnaire_res = Questionnaire.from_json(contained_questionnaires[0])
 
         return qnr
 
