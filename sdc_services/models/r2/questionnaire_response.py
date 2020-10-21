@@ -61,18 +61,24 @@ class QuestionnaireResponse(object):
             if 'valueCoding' not in answer:
                 continue
 
-            questionnaire_code = {
+            codes = [{
                 'system': 'http://us.truenth.org/questionnaire',
                 'code': self.questionnaire_ref['reference'].split('/')[-1],
                 'display': self.questionnaire_ref['display'],
-            }
+            }]
+
+            if self.questionnaire_res:
+                # remove option index to get linkId
+                link_id = ".".join(answer['valueCoding']['code'].split('.')[0:2])
+                question_codes = self.questionnaire_res.question_codes(link_id)
+                codes.extend(question_codes)
+
 
             obs = Observation(
                 derived_from=f"QuestionnaireResponse/{self.identifier['value']}",
                 value={'valueCoding': answer['valueCoding']},
                 issued=self.authored,
-                # TODO add codes from Questionnaire questions (Questionnaire.item.code)
-                code=questionnaire_code,
+                code=codes,
             )
             observations.append(obs.as_fhir())
 
