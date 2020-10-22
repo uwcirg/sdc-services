@@ -4,7 +4,7 @@
     "label": "cPRO survey session ID",
     "system": "https://cpro-dev.128.208.230.75.nip.io",
     "use": "official",
-    "value": "533.0"
+    "value": "538.0"
   },
   "questionnaire": {
     "display": "Treatment symptoms and side effects",
@@ -12,18 +12,18 @@
   },
   "source": {
     "display": "patient demographics",
-    "reference": "https://eproms-dev.128.208.230.75.nip.io/api/demographics/2"
+    "reference": "https://eproms-dev.128.208.230.75.nip.io/api/demographics/4"
   },
   "status": "completed",
   "subject": {
     "display": "patient demographics",
-    "reference": "https://eproms-dev.128.208.230.75.nip.io/api/demographics/2"
-  },
+    "reference": "https://eproms-dev.128.208.230.75.nip.io/api/demographics/4"
+  }
   "author": {
     "display": "patient demographics",
-    "reference": "https://eproms-dev.128.208.230.75.nip.io/api/demographics/2"
+    "reference": "https://eproms-dev.128.208.230.75.nip.io/api/demographics/4"
   },
-  "authored": "2020-10-15T05:55:22Z",
+  "authored": "2020-10-22T02:18:22Z",
   "extension": [
     {
       "url": "http://us.truenth.org/identity-codes/visit-name",
@@ -67,13 +67,13 @@
       {
         "answer": [
           {
-            "valueString": "A little bit"
+            "valueString": "Somewhat"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.3.2",
+              "code": "ironman_ss.3.3",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "A little bit"
+              "text": "Somewhat"
             }
           }
         ],
@@ -83,13 +83,13 @@
       {
         "answer": [
           {
-            "valueString": "Never"
+            "valueString": "Frequently"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.4.1",
+              "code": "ironman_ss.4.4",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "Never"
+              "text": "Frequently"
             }
           }
         ],
@@ -99,13 +99,13 @@
       {
         "answer": [
           {
-            "valueString": "Mild"
+            "valueString": "Very severe"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.5.2",
+              "code": "ironman_ss.5.5",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "Mild"
+              "text": "Very severe"
             }
           }
         ],
@@ -115,13 +115,13 @@
       {
         "answer": [
           {
-            "valueString": "Somewhat"
+            "valueString": "Not at all"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.6.3",
+              "code": "ironman_ss.6.1",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "Somewhat"
+              "text": "Not at all"
             }
           }
         ],
@@ -131,13 +131,13 @@
       {
         "answer": [
           {
-            "valueString": "None"
+            "valueString": "Mild"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.7.1",
+              "code": "ironman_ss.7.2",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "None"
+              "text": "Mild"
             }
           }
         ],
@@ -147,13 +147,13 @@
       {
         "answer": [
           {
-            "valueString": "A little bit"
+            "valueString": "Somewhat"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.8.2",
+              "code": "ironman_ss.8.3",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "A little bit"
+              "text": "Somewhat"
             }
           }
         ],
@@ -163,13 +163,13 @@
       {
         "answer": [
           {
-            "valueString": "None"
+            "valueString": "Severe"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.9.1",
+              "code": "ironman_ss.9.4",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "None"
+              "text": "Severe"
             }
           }
         ],
@@ -179,13 +179,13 @@
       {
         "answer": [
           {
-            "valueString": "A little bit"
+            "valueString": "Very much"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.10.2",
+              "code": "ironman_ss.10.5",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "A little bit"
+              "text": "Very much"
             }
           }
         ],
@@ -243,13 +243,13 @@
       {
         "answer": [
           {
-            "valueString": "Never"
+            "valueString": "Frequently"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.14.1",
+              "code": "ironman_ss.14.4",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "Never"
+              "text": "Frequently"
             }
           }
         ],
@@ -259,13 +259,13 @@
       {
         "answer": [
           {
-            "valueString": "Mild"
+            "valueString": "Very severe"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.15.2",
+              "code": "ironman_ss.15.5",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "Mild"
+              "text": "Very severe"
             }
           }
         ],
@@ -275,13 +275,13 @@
       {
         "answer": [
           {
-            "valueString": "A little bit"
+            "valueString": "Not at all"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.16.2",
+              "code": "ironman_ss.16.1",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "A little bit"
+              "text": "Not at all"
             }
           }
         ],
@@ -291,13 +291,13 @@
       {
         "answer": [
           {
-            "valueString": "Never"
+            "valueString": "Rarely"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.17.1",
+              "code": "ironman_ss.17.2",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "Never"
+              "text": "Rarely"
             }
           }
         ],
@@ -307,13 +307,13 @@
       {
         "answer": [
           {
-            "valueString": "Mild"
+            "valueString": "Moderate"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.18.2",
+              "code": "ironman_ss.18.3",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "Mild"
+              "text": "Moderate"
             }
           }
         ],
@@ -323,13 +323,13 @@
       {
         "answer": [
           {
-            "valueString": "Somewhat"
+            "valueString": "Quite a bit"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.19.3",
+              "code": "ironman_ss.19.4",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "Somewhat"
+              "text": "Quite a bit"
             }
           }
         ],
@@ -339,13 +339,13 @@
       {
         "answer": [
           {
-            "valueString": "A little"
+            "valueString": "Quite a bit"
           },
           {
             "valueCoding": {
-              "code": "ironman_ss.20.2",
+              "code": "ironman_ss.20.3",
               "system": "https://eproms-dev.128.208.230.75.nip.io/api/codings/assessment",
-              "text": "A little"
+              "text": "Quite a bit"
             }
           }
         ],
@@ -353,7 +353,7 @@
         "text": "During the past week: Has your physical condition or medical treatment interfered with your social activities?"
       }
     ]
-  },
+  }
   "contained": [
     {
       "identifier": [
