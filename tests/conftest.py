@@ -31,3 +31,8 @@ def r2_questionnaire_response(request):
 @fixture
 def empro_r2_questionnaire_response(request):
     return json_from_file(request, "empro.min.QuestionnaireResponse.r2.json")
+
+
+@fixture
+def ironman_ss_r2_qnr_contained_questionnaire(request):
+    return json_from_file(request, "ironman_ss.QuestionnaireResponse.r2.json")

@@ -32,7 +32,7 @@ class Observation(object):
 
         if self.code:
             fhir_json.update({
-                'code': {'coding': [self.code]},
+                'code': {'coding': self.code},
             })
 
         if self.value:

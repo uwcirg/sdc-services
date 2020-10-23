@@ -1,4 +1,5 @@
 from sdc_services.models.r2.observation import Observation
+from sdc_services.models.r3.questionnaire import Questionnaire
 
 
 class QuestionnaireResponse(object):
@@ -6,7 +7,8 @@ class QuestionnaireResponse(object):
         self.group = None
         self.identifier = None
         self.authored = None
-        self.questionnaire = None
+        self.questionnaire_ref = None
+        self.questionnaire_res = None
 
     @classmethod
     def from_json(cls, qnr_json):
@@ -15,7 +17,15 @@ class QuestionnaireResponse(object):
         qnr.group = qnr_json['group']
         qnr.identifier = qnr_json['identifier']
         qnr.authored = qnr_json['authored']
-        qnr.questionnaire = qnr_json['questionnaire']
+        qnr.questionnaire_ref = qnr_json['questionnaire']
+
+        if 'contained' in qnr_json:
+            contained_questionnaires = []
+            for resource in qnr_json['contained']:
+                if resource['resourceType'] == 'Questionnaire':
+                    contained_questionnaires.append(resource)
+            # HACK use FHIR r3 for contained Questionnaire (in r2 QuestionnaireResponse)
+            qnr.questionnaire_res = Questionnaire.from_json(contained_questionnaires[0])
 
         return qnr
 
@@ -51,18 +61,24 @@ class QuestionnaireResponse(object):
             if 'valueCoding' not in answer:
                 continue
 
-            questionnaire_code = {
+            codes = [{
                 'system': 'http://us.truenth.org/questionnaire',
-                'code': self.questionnaire['reference'].split('/')[-1],
-                'display': self.questionnaire['display'],
-            }
+                'code': self.questionnaire_ref['reference'].split('/')[-1],
+                'display': self.questionnaire_ref['display'],
+            }]
+
+            if self.questionnaire_res:
+                # remove option index to get linkId
+                link_id = ".".join(answer['valueCoding']['code'].split('.')[0:2])
+                question_codes = self.questionnaire_res.question_codes(link_id)
+                codes.extend(question_codes)
+
 
             obs = Observation(
                 derived_from=f"QuestionnaireResponse/{self.identifier['value']}",
                 value={'valueCoding': answer['valueCoding']},
                 issued=self.authored,
-                # TODO add codes from Questionnaire questions (Questionnaire.item.code)
-                code=questionnaire_code,
+                code=codes,
             )
             observations.append(obs.as_fhir())
 
