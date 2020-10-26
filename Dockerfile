@@ -1,4 +1,6 @@
 FROM python:3.7
+# link GitHub Container Repository to GitHub repository
+LABEL org.opencontainers.image.source https://github.com/uwcirg/sdc-services
 
 WORKDIR /opt/app
 

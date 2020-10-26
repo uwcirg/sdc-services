@@ -2,7 +2,7 @@
 version: "3.7"
 services:
   web:
-    image: "uwcirg/sdc-services:${DOCKER_IMAGE_TAG:-develop}"
+    image: "ghcr.io/uwcirg/sdc-services:${DOCKER_IMAGE_TAG:-main}"
     build:
       context: .
     ports:
