@@ -34,7 +34,11 @@ class Observation(object):
         if self.derived_from:
             fhir_json.update({
                 'derivedFrom': [{
-                    'reference': f"{self.derived_from['system']}/{self.derived_from['value']}",
+                    'reference': '/'.join((
+                        self.derived_from['system'],
+                        'QuestionnaireResponse',
+                        self.derived_from['value'],
+                    ))
                 }]
             })
 
