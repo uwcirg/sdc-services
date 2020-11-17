@@ -12,7 +12,16 @@ class Observation(object):
         self.value = value
         self.issued = issued
         # list of codes
-        self.codes = codes
+        if codes is not None:
+            display_codes = []
+            # Use Observation code.text as code.display
+            for code in codes.copy():
+                text = code.pop('text', None)
+                if text:
+                    code['display'] = text
+                display_codes.append(code)
+
+            self.codes = display_codes
 
     def as_fhir(self):
         fhir_json = {
