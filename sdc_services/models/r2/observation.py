@@ -30,12 +30,8 @@ class Observation(object):
             })
 
         if self.code:
-            code = self.code.copy()
-            text = code.pop('text', None)
-            if text:
-                code['display'] = text
             fhir_json.update({
-                'code': {'coding': code},
+                'code': {'coding': self.code},
             })
 
         if self.value:
