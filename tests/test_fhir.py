@@ -18,10 +18,10 @@ def test_extract_observation(empro_r2_questionnaire_response):
 
     assert obs['issued'] == empro_r2_questionnaire_response['authored']
 
-    assert obs['related'][0] == {
-        "target": f"QuestionnaireResponse/{empro_r2_questionnaire_response['identifier']['value']}",
-        "type": "derived-from",
-    }
+    assert obs['derivedFrom'] == [{
+        'reference': 'https://ae-eproms-test.cirg.washington.edu/QuestionnaireResponse/2085.0'
+    }]
+
 
     assert obs['valueCoding'] == empro_r2_questionnaire_response['group']['question'][0]['answer'][1]['valueCoding']
 

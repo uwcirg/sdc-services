@@ -75,10 +75,10 @@ class QuestionnaireResponse(object):
 
 
             obs = Observation(
-                derived_from=f"QuestionnaireResponse/{self.identifier['value']}",
+                derived_from=self.identifier,
                 value={'valueCoding': answer['valueCoding']},
                 issued=self.authored,
-                code=codes,
+                codes=codes,
             )
             observations.append(obs.as_fhir())
 
