@@ -78,7 +78,7 @@ class QuestionnaireResponse(object):
                 derived_from=self.identifier,
                 value={'valueCoding': answer['valueCoding']},
                 issued=self.authored,
-                code=codes,
+                codes=codes,
             )
             observations.append(obs.as_fhir())
 
