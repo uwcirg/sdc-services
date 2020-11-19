@@ -9,8 +9,19 @@ class Observation(object):
     def __init__(self, derived_from=None, value=None, issued=None, codes=None):
         # FHIR reference to other resource
         self.derived_from = derived_from
-        self.value = value
         self.issued = issued
+
+
+        self.value = value
+        if value is not None and 'valueCoding' in value:
+            display_value = value.copy()
+            coding = display_value['valueCoding']
+
+            text = display_value['valueCoding'].pop('text', None)
+            if text:
+                display_value['valueCoding']['display'] = text
+            self.value = display_value
+
         # list of codes
         if codes is not None:
             display_codes = []
