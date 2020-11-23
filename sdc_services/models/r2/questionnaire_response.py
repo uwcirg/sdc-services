@@ -61,12 +61,7 @@ class QuestionnaireResponse(object):
             if 'valueCoding' not in answer:
                 continue
 
-            codes = [{
-                'system': 'http://us.truenth.org/questionnaire',
-                'code': self.questionnaire_ref['reference'].split('/')[-1],
-                'display': self.questionnaire_ref['display'],
-            }]
-
+            codes = []
             if self.questionnaire_res:
                 # remove option index to get linkId
                 link_id = ".".join(answer['valueCoding']['code'].split('.')[0:2])
