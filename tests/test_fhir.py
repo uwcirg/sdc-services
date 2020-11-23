@@ -13,9 +13,6 @@ def test_extract_observation(empro_r2_questionnaire_response):
 
     obs = observations[0]
 
-    assert obs['code']['coding'][0]['code'] == 'ironman_ss'
-    assert obs['code']['coding'][0]['system'] == 'http://us.truenth.org/questionnaire'
-
     assert obs['issued'] == empro_r2_questionnaire_response['authored']
 
     assert obs['derivedFrom'] == [{
@@ -31,10 +28,10 @@ def test_extract_observation_contained_questionnaire(ironman_ss_r2_qnr_contained
     qnr = QuestionnaireResponse.from_json(ironman_ss_r2_qnr_contained_questionnaire)
     observations = qnr.extract()
 
-    assert observations[2]['code']['coding'][1]['code'] == 'general_pain'
+    assert observations[2]['code']['coding'][0]['code'] == 'general_pain'
 
-    assert qnr.questionnaire_res.item[3]['code'][0] == observations[3]['code']['coding'][1]
-    assert observations[3]['code']['coding'][1]['code'] == 'joint_pain'
+    assert qnr.questionnaire_res.item[3]['code'][0] == observations[3]['code']['coding'][0]
+    assert observations[3]['code']['coding'][0]['code'] == 'joint_pain'
 
 
 def test_extract_api(client, r2_questionnaire_response):
