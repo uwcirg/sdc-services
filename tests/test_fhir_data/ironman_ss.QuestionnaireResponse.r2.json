@@ -365,878 +365,1238 @@
       ],
       "item": [
         {
+          "type": "choice",
+          "linkId": "ironman_ss.1",
           "code": [
             {
+              "system": "http://us.truenth.org/observation",
               "code": "general_pain",
-              "display": "General pain",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.1",
-          "option": [
-            {
-              "valueCoding": {
-                "code": "ironman_ss.1.1",
-                "display": "Never"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "ironman_ss.1.2",
-                "display": "Rarely"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "ironman_ss.1.3",
-                "display": "Occasionally"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "ironman_ss.1.4",
-                "display": "Frequently"
-              }
-            },
-            {
-              "valueCoding": {
-                "code": "ironman_ss.1.5",
-                "display": "Almost constantly"
-              }
+              "display": "General pain"
             }
           ],
           "text": "In the last 7 days, how OFTEN did you have pain?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "general_pain",
-              "display": "General pain",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.2",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.2.1",
-                "display": "None"
+                "display": "Never",
+                "code": "ironman_ss.1.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.2.2",
-                "display": "Mild"
+                "display": "Rarely",
+                "code": "ironman_ss.1.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.2.3",
-                "display": "Moderate"
+                "display": "Occasionally",
+                "code": "ironman_ss.1.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.2.4",
-                "display": "Severe"
+                "display": "Frequently",
+                "code": "ironman_ss.1.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.2.5",
-                "display": "Very severe"
+                "display": "Almost constantly",
+                "code": "ironman_ss.1.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.2",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "general_pain",
+              "display": "General pain"
             }
           ],
           "text": "In the last 7 days, what was the SEVERITY of your PAIN at its WORST?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "general_pain",
-              "display": "General pain",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.3",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.3.1",
-                "display": "Not at all"
+                "display": "None",
+                "code": "ironman_ss.2.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.3.2",
-                "display": "A little bit"
+                "display": "Mild",
+                "code": "ironman_ss.2.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.3.3",
-                "display": "Somewhat"
+                "display": "Moderate",
+                "code": "ironman_ss.2.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.3.4",
-                "display": "Quite a bit"
+                "display": "Severe",
+                "code": "ironman_ss.2.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.3.5",
-                "display": "Very much"
+                "display": "Very severe",
+                "code": "ironman_ss.2.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.3",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "general_pain",
+              "display": "General pain"
             }
           ],
           "text": "In the last 7 days, how much did PAIN INTERFERE with your usual or daily activities?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "joint_pain",
-              "display": "Joint pain",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.4",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.4.1",
-                "display": "Never"
+                "display": "Not at all",
+                "code": "ironman_ss.3.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.4.2",
-                "display": "Rarely"
+                "display": "A little bit",
+                "code": "ironman_ss.3.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.4.3",
-                "display": "Occasionally"
+                "display": "Somewhat",
+                "code": "ironman_ss.3.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.4.4",
-                "display": "Frequently"
+                "display": "Quite a bit",
+                "code": "ironman_ss.3.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.4.5",
-                "display": "Almost constantly"
+                "display": "Very much",
+                "code": "ironman_ss.3.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.4",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "joint_pain",
+              "display": "Joint pain"
             }
           ],
           "text": "In the last 7 days, how OFTEN did you have ACHING JOINTS (SUCH AS ELBOWS, KNEES, SHOULDERS)?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "joint_pain",
-              "display": "Joint pain",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.5",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.5.1",
-                "display": "None"
+                "display": "Never",
+                "code": "ironman_ss.4.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.5.2",
-                "display": "Mild"
+                "display": "Rarely",
+                "code": "ironman_ss.4.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.5.3",
-                "display": "Moderate"
+                "display": "Occasionally",
+                "code": "ironman_ss.4.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.5.4",
-                "display": "Severe"
+                "display": "Frequently",
+                "code": "ironman_ss.4.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.5.5",
-                "display": "Very severe"
+                "display": "Almost constantly",
+                "code": "ironman_ss.4.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.5",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "joint_pain",
+              "display": "Joint pain"
             }
           ],
           "text": "In the last 7 days, what was the SEVERITY of your ACHING JOINTS (SUCH AS ELBOWS, KNEES, SHOULDERS) at their WORST?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "joint_pain",
-              "display": "Joint pain",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.6",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.6.1",
-                "display": "Not at all"
+                "display": "None",
+                "code": "ironman_ss.5.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.6.2",
-                "display": "A little bit"
+                "display": "Mild",
+                "code": "ironman_ss.5.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.6.3",
-                "display": "Somewhat"
+                "display": "Moderate",
+                "code": "ironman_ss.5.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.6.4",
-                "display": "Quite a bit"
+                "display": "Severe",
+                "code": "ironman_ss.5.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.6.5",
-                "display": "Very much"
+                "display": "Very severe",
+                "code": "ironman_ss.5.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.6",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "joint_pain",
+              "display": "Joint pain"
             }
           ],
           "text": "In the last 7 days, how much did ACHING JOINTS (SUCH AS ELBOWS, KNEES, SHOULDERS) INTERFERE with your usual or daily activities?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "insomnia",
-              "display": "Insomnia",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.7",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.7.1",
-                "display": "None"
+                "display": "Not at all",
+                "code": "ironman_ss.6.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.7.2",
-                "display": "Mild"
+                "display": "A little bit",
+                "code": "ironman_ss.6.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.7.3",
-                "display": "Moderate"
+                "display": "Somewhat",
+                "code": "ironman_ss.6.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.7.4",
-                "display": "Severe"
+                "display": "Quite a bit",
+                "code": "ironman_ss.6.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.7.5",
-                "display": "Very severe"
+                "display": "Very much",
+                "code": "ironman_ss.6.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.7",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "insomnia",
+              "display": "Insomnia"
             }
           ],
           "text": "In the last 7 days, what was the SEVERITY of your INSOMNIA (INCLUDING DIFFICULTY FALLING ASLEEP, STAYING ASLEEP, OR WAKING UP EARLY) at its worst?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "insomnia",
-              "display": "Insomnia",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.8",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.8.1",
-                "display": "Not at all"
+                "display": "None",
+                "code": "ironman_ss.7.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.8.2",
-                "display": "A little bit"
+                "display": "Mild",
+                "code": "ironman_ss.7.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.8.3",
-                "display": "Somewhat"
+                "display": "Moderate",
+                "code": "ironman_ss.7.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.8.4",
-                "display": "Quite a bit"
+                "display": "Severe",
+                "code": "ironman_ss.7.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.8.5",
-                "display": "Very much"
+                "display": "Very severe",
+                "code": "ironman_ss.7.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.8",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "insomnia",
+              "display": "Insomnia"
             }
           ],
           "text": "In the last 7 days, how much did INSOMNIA (INCLUDING DIFFICULTY FALLING ASLEEP, STAYING ASLEEP, OR WAKING UP EARLY) INTERFERE with your usual or daily activities?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "fatigue",
-              "display": "Fatigue",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.9",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.9.1",
-                "display": "None"
+                "display": "Not at all",
+                "code": "ironman_ss.8.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.9.2",
-                "display": "Mild"
+                "display": "A little bit",
+                "code": "ironman_ss.8.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.9.3",
-                "display": "Moderate"
+                "display": "Somewhat",
+                "code": "ironman_ss.8.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.9.4",
-                "display": "Severe"
+                "display": "Quite a bit",
+                "code": "ironman_ss.8.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.9.5",
-                "display": "Very severe"
+                "display": "Very much",
+                "code": "ironman_ss.8.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.9",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "fatigue",
+              "display": "Fatigue"
             }
           ],
           "text": "In the last 7 days, what was the SEVERITY of your FATIGUE, TIREDNESS, OR LACK OF ENERGY at its WORST?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "fatigue",
-              "display": "Fatigue",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.10",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.10.1",
-                "display": "Not at all"
+                "display": "None",
+                "code": "ironman_ss.9.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.10.2",
-                "display": "A little bit"
+                "display": "Mild",
+                "code": "ironman_ss.9.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.10.3",
-                "display": "Somewhat"
+                "display": "Moderate",
+                "code": "ironman_ss.9.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.10.4",
-                "display": "Quite a bit"
+                "display": "Severe",
+                "code": "ironman_ss.9.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.10.5",
-                "display": "Very much"
+                "display": "Very severe",
+                "code": "ironman_ss.9.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.10",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "fatigue",
+              "display": "Fatigue"
             }
           ],
           "text": "In the last 7 days, how much did FATIGUE, TIREDNESS, OR LACK OF ENERGY INTERFERE with your usual or daily activities?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "anxious",
-              "display": "Anxious",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.11",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.11.1",
-                "display": "Never"
+                "display": "Not at all",
+                "code": "ironman_ss.10.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.11.2",
-                "display": "Rarely"
+                "display": "A little bit",
+                "code": "ironman_ss.10.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.11.3",
-                "display": "Occasionally"
+                "display": "Somewhat",
+                "code": "ironman_ss.10.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.11.4",
-                "display": "Frequently"
+                "display": "Quite a bit",
+                "code": "ironman_ss.10.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.11.5",
-                "display": "Almost constantly"
+                "display": "Very much",
+                "code": "ironman_ss.10.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.11",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "anxious",
+              "display": "Anxious"
             }
           ],
           "text": "In the last 7 days, how OFTEN did you feel ANXIETY?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "anxious",
-              "display": "Anxious",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.12",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.12.1",
-                "display": "None"
+                "display": "Never",
+                "code": "ironman_ss.11.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.12.2",
-                "display": "Mild"
+                "display": "Rarely",
+                "code": "ironman_ss.11.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.12.3",
-                "display": "Moderate"
+                "display": "Occasionally",
+                "code": "ironman_ss.11.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.12.4",
-                "display": "Severe"
+                "display": "Frequently",
+                "code": "ironman_ss.11.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.12.5",
-                "display": "Very severe"
+                "display": "Almost constantly",
+                "code": "ironman_ss.11.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.12",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "anxious",
+              "display": "Anxious"
             }
           ],
           "text": "In the last 7 days, what was the SEVERITY of your ANXIETY at its WORST?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "anxious",
-              "display": "Anxious",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.13",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.13.1",
-                "display": "Not at all"
+                "display": "None",
+                "code": "ironman_ss.12.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.13.2",
-                "display": "A little bit"
+                "display": "Mild",
+                "code": "ironman_ss.12.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.13.3",
-                "display": "Somewhat"
+                "display": "Moderate",
+                "code": "ironman_ss.12.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.13.4",
-                "display": "Quite a bit"
+                "display": "Severe",
+                "code": "ironman_ss.12.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.13.5",
-                "display": "Very much"
+                "display": "Very severe",
+                "code": "ironman_ss.12.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.13",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "anxious",
+              "display": "Anxious"
             }
           ],
           "text": "In the last 7 days, how much did ANXIETY INTERFERE with your usual or daily activities?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "discouraged",
-              "display": "Discouraged",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.14",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.14.1",
-                "display": "Never"
+                "display": "Not at all",
+                "code": "ironman_ss.13.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.14.2",
-                "display": "Rarely"
+                "display": "A little bit",
+                "code": "ironman_ss.13.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.14.3",
-                "display": "Occasionally"
+                "display": "Somewhat",
+                "code": "ironman_ss.13.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.14.4",
-                "display": "Frequently"
+                "display": "Quite a bit",
+                "code": "ironman_ss.13.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.14.5",
-                "display": "Almost constantly"
+                "display": "Very much",
+                "code": "ironman_ss.13.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.14",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "discouraged",
+              "display": "Discouraged"
             }
           ],
           "text": "In the last 7 days, how OFTEN did you FEEL THAT NOTHING COULD CHEER YOU UP?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "discouraged",
-              "display": "Discouraged",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.15",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.15.1",
-                "display": "None"
+                "display": "Never",
+                "code": "ironman_ss.14.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.15.2",
-                "display": "Mild"
+                "display": "Rarely",
+                "code": "ironman_ss.14.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.15.3",
-                "display": "Moderate"
+                "display": "Occasionally",
+                "code": "ironman_ss.14.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.15.4",
-                "display": "Severe"
+                "display": "Frequently",
+                "code": "ironman_ss.14.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.15.5",
-                "display": "Very severe"
+                "display": "Almost constantly",
+                "code": "ironman_ss.14.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.15",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "discouraged",
+              "display": "Discouraged"
             }
           ],
           "text": "In the last 7 days, what was the SEVERITY of your FEELINGS THAT NOTHING COULD CHEER YOU UP at THEIR WORST?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "discouraged",
-              "display": "Discouraged",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.16",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.16.1",
-                "display": "Not at all"
+                "display": "None",
+                "code": "ironman_ss.15.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.16.2",
-                "display": "A little bit"
+                "display": "Mild",
+                "code": "ironman_ss.15.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.16.3",
-                "display": "Somewhat"
+                "display": "Moderate",
+                "code": "ironman_ss.15.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.16.4",
-                "display": "Quite a bit"
+                "display": "Severe",
+                "code": "ironman_ss.15.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.16.5",
-                "display": "Very much"
+                "display": "Very severe",
+                "code": "ironman_ss.15.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.16",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "discouraged",
+              "display": "Discouraged"
             }
           ],
           "text": "In the last 7 days, how much did THE FEELING THAT NOTHING COULD CHEER YOU UP INTERFERE with your usual or daily activities?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "sad",
-              "display": "Sad",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.17",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.17.1",
-                "display": "Never"
+                "display": "Not at all",
+                "code": "ironman_ss.16.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.17.2",
-                "display": "Rarely"
+                "display": "A little bit",
+                "code": "ironman_ss.16.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.17.3",
-                "display": "Occasionally"
+                "display": "Somewhat",
+                "code": "ironman_ss.16.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.17.4",
-                "display": "Frequently"
+                "display": "Quite a bit",
+                "code": "ironman_ss.16.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.17.5",
-                "display": "Almost constantly"
+                "display": "Very much",
+                "code": "ironman_ss.16.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.17",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "sad",
+              "display": "Sad"
             }
           ],
           "text": "In the last 7 days, how OFTEN did you have SAD OR UNHAPPY FEELINGS?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "sad",
-              "display": "Sad",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.18",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.18.1",
-                "display": "None"
+                "display": "Never",
+                "code": "ironman_ss.17.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.18.2",
-                "display": "Mild"
+                "display": "Rarely",
+                "code": "ironman_ss.17.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.18.3",
-                "display": "Moderate"
+                "display": "Occasionally",
+                "code": "ironman_ss.17.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.18.4",
-                "display": "Severe"
+                "display": "Frequently",
+                "code": "ironman_ss.17.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.18.5",
-                "display": "Very severe"
+                "display": "Almost constantly",
+                "code": "ironman_ss.17.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.18",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "sad",
+              "display": "Sad"
             }
           ],
           "text": "In the last 7 days, what was the SEVERITY of your SAD OR UNHAPPY FEELINGS at their WORST?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "sad",
-              "display": "Sad",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.19",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.19.1",
-                "display": "Not at all"
+                "display": "None",
+                "code": "ironman_ss.18.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.19.2",
-                "display": "A little bit"
+                "display": "Mild",
+                "code": "ironman_ss.18.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.19.3",
-                "display": "Somewhat"
+                "display": "Moderate",
+                "code": "ironman_ss.18.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.19.4",
-                "display": "Quite a bit"
+                "display": "Severe",
+                "code": "ironman_ss.18.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.19.5",
-                "display": "Very much"
+                "display": "Very severe",
+                "code": "ironman_ss.18.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
               }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.19",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "sad",
+              "display": "Sad"
             }
           ],
           "text": "In the last 7 days, how much did SAD OR UNHAPPY FEELINGS INTERFERE with your usual or daily activities?",
-          "type": "choice"
-        },
-        {
-          "code": [
-            {
-              "code": "social_isolation",
-              "display": "Social isolation",
-              "system": "http://us.truenth.org/observation"
-            }
-          ],
-          "linkId": "ironman_ss.20",
           "option": [
             {
               "valueCoding": {
-                "code": "ironman_ss.20.1",
-                "display": "Not at all"
+                "display": "Not at all",
+                "code": "ironman_ss.19.1"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.20.2",
-                "display": "A little"
+                "display": "A little bit",
+                "code": "ironman_ss.19.2"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.20.3",
-                "display": "Quite a bit"
+                "display": "Somewhat",
+                "code": "ironman_ss.19.3"
               }
             },
             {
               "valueCoding": {
-                "code": "ironman_ss.20.4",
-                "display": "Very much"
+                "display": "Quite a bit",
+                "code": "ironman_ss.19.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
               }
+            },
+            {
+              "valueCoding": {
+                "display": "Very much",
+                "code": "ironman_ss.19.5",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "linkId": "ironman_ss.20",
+          "code": [
+            {
+              "system": "http://us.truenth.org/observation",
+              "code": "social_isolation",
+              "display": "Social isolation"
             }
           ],
           "text": "During the past week: Has your physical condition or medical treatment interfered with your social activities?",
-          "type": "choice"
+          "option": [
+            {
+              "valueCoding": {
+                "display": "Not at all",
+                "code": "ironman_ss.20.1"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "A little",
+                "code": "ironman_ss.20.2"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Quite a bit",
+                "code": "ironman_ss.20.3",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "penultimate"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Very much",
+                "code": "ironman_ss.20.4",
+                "extension": [
+                  {
+                    "url": "http://us.truenth.org/observation/severity_extension",
+                    "valueCoding": {
+                      "system": "http://us.truenth.org/observation/severity",
+                      "code": "ultimate"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         }
       ],
       "resourceType": "Questionnaire",
