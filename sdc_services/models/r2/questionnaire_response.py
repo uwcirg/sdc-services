@@ -64,10 +64,14 @@ class QuestionnaireResponse(object):
             codes = []
             if self.questionnaire_res:
                 # remove option index to get linkId
-                link_id = ".".join(answer['valueCoding']['code'].split('.')[0:2])
+                answer_code = answer['valueCoding']['code']
+                link_id = ".".join(answer_code.split('.')[0:2])
                 question_codes = self.questionnaire_res.question_codes(link_id)
                 codes.extend(question_codes)
 
+                # add any attributes (eg extensions) in Questionnaire option
+                questionnaire_option = self.questionnaire_res.answered_option(answer_code)
+                answer['valueCoding'].update(questionnaire_option)
 
             obs = Observation(
                 derived_from=self.identifier,

@@ -33,6 +33,15 @@ def test_extract_observation_contained_questionnaire(ironman_ss_r2_qnr_contained
     assert qnr.questionnaire_res.item[3]['code'][0] == observations[3]['code']['coding'][0]
     assert observations[3]['code']['coding'][0]['code'] == 'joint_pain'
 
+    assert observations[4]['valueCoding']['code'] == 'ironman_ss.5.5'
+    assert observations[4]['valueCoding']['extension'] == [{
+        'url': 'http://us.truenth.org/observation/severity_extension',
+        'valueCoding': {
+            'system': 'http://us.truenth.org/observation/severity',
+            'code': 'ultimate',
+        },
+    }]
+
 
 def test_extract_api(client, r2_questionnaire_response):
     result = client.post('/v/r2/fhir/$extract', json=r2_questionnaire_response)
